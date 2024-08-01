@@ -53,3 +53,35 @@
 .top-icons img:hover {
     transform: scale(1.5);
 }
+
+.content{
+    margin-left: 70px;
+}
+
+
+
+/*HEADER PROVICIONAL*/
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.header .div-header{
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background-color: gray;
+}
+
+.content-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.asig{
+    display: flex;
+    flex-direction: row-reverse;
+}
