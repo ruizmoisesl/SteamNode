@@ -85,3 +85,24 @@
     display: flex;
     flex-direction: row-reverse;
 }
+
+/* Calculadora IMC */
+
+.imc-calculator{
+    position: relative;
+    width: 40%;
+    background-color: rgba(128, 128, 128, 0.644);
+    padding: 10px;
+}
+
+.head-calculator{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head-calculator button{
+    background: none;
+    border: none;
+}
