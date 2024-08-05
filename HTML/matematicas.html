@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/matematicas.css">
     <title>NUTRIVAM</title>
 </head>
+
 <body>
     <div class="sidebar">
         <div class="top-icons">
-            <a href="index.html"><img src="../img/Icons/home.svg" alt=""></a>
+            <a href="../index.html"><img src="../img/Icons/home.svg" alt=""></a>
         </div>
         <div class="bottom-icons">
-            <a href="tecnologia.html"><img src="../img/Icons/tecnologia-icono.svg"  alt="Tecnologia"></a>
+            <a href="tecnologia.html"><img src="../img/Icons/tecnologia-icono.svg" alt="Tecnologia"></a>
             <a href="matematicas.html"><img src="../img/Icons/matematicas-icono sec.svg" alt="Matematicas"></a>
             <a href="quimica.html"><img src="../img/Icons/quimica-icono.svg" alt="Quimica"></a>
             <a href="fisica.html"><img src="../img/Icons/fisica-icono.svg" alt="Fisica"></a>
@@ -21,35 +23,42 @@
     <section class="content">
         <header class="header">
             <div class="content-header">
-                <div class="title"><h1>NUTRIVAM</h1></div>
+                <div class="title">
+                    <h1>NUTRIVAM</h1>
+                </div>
             </div>
             <div class="div-header"></div>
         </header>
         <article class="content-b2">
-            <div class="imc-calculator">
-                <div class="head-calculator">
-                    <h1>Calcula tu IMC</h1>
-                    <button class="close-btn" id="close-btn"><img src="../img/Icons/x.svg" alt=""></button>
-                </div>
-                <form action="">
-                    <div>
-                        <h2>Peso</h2>
-                        <input type="number" id="peso">
+            <div>
+                <button id="btn_calculadoradiv" class="Calcu-imc">Calcula tu IMC</button>
+                <div class="imc-calculator">
+                    <div class="head-calculator">
+                        <h1>Calcula tu IMC</h1>
+                        <button class="close-btn" id="close-btn"><img src="../img/Icons/x.svg" alt=""></button>
                     </div>
-                    <div>
-                        <h2>Altura</h2>
-                        <input type="number" id="altura">
+                    <form action="">
+                        <div>
+                            <h2>Peso</h2>
+                            <input type="number" id="peso">
+                        </div>
+                        <div>
+                            <h2>Altura</h2>
+                            <input type="number" id="altura">
+                        </div>
+                        <div>
+                            <button type="button" id="btn-imc">Calcular IMC</button>
+                        </div>
+                    </form>
+
+                    <div id="resultado">
                     </div>
-                    <button type="button" id="btn-imc">Calcular IMC</button>
-                </form>
-
-                <div id="resultado">
                 </div>
-
-                
             </div>
+
         </article>
     </section>
     <script src="../JS/script.js"></script>
 </body>
+
 </html>

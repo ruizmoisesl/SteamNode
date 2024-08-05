@@ -89,7 +89,13 @@
 /* Calculadora IMC */
 
 .imc-calculator{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     position: relative;
+    border-radius: 10px;
     width: 40%;
     background-color: rgba(128, 128, 128, 0.644);
     padding: 10px;
@@ -98,6 +104,7 @@
 .head-calculator{
     display: flex;
     flex-direction: row;
+    width: 300px;
     justify-content: space-between;
     align-items: center;
 }
@@ -105,4 +112,14 @@
 .head-calculator button{
     background: none;
     border: none;
+}
+
+.Calcu-imc{
+    border: none;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
 }
