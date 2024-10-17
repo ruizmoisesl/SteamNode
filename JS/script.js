@@ -1,31 +1,59 @@
 let btn_imc = document.getElementById('btn-imc');
-let close_btn = document.getElementById('close-btn');
-
+let div_resultado = document.getElementById('resultado');
+let div_resultados = document.getElementById('resultados');
+let btn_close = document.getElementById('btn-close')
 
 btn_imc.addEventListener('click', function() {
     let altura = document.getElementById('altura').value ; 
     let peso = document.getElementById('peso').value;
-    let div_resultado = document.getElementById('resultado');
+    
     let altura2 = altura * altura;
 
     const imc = peso / altura2;
     const imc_round = Math.round(imc * 10) / 10;
+    div_resultados.classList.remove('hide')
+    div_resultados.classList.add('show')
+    div_resultados.style.display = 'flex'
 
-    let resultado = '';
+
 
     if (imc_round < 18.5) {
-        resultado = 'TU IMC ES DE: ' + imc_round + ' - Peso bajo';
-    } else if (imc_round >= 18.5 && imc_round <= 24.9) {
-        resultado = 'TU IMC ES DE: ' + imc_round + ' - Peso normal';
-    } else if (imc_round >= 25 && imc_round <= 29.99) {
-        resultado = 'TU IMC ES DE: ' + imc_round + ' - Sobrepeso';
+        document.getElementById('resultado').innerHTML = `
+        <div class="color result">
+            <h1>Tu IMC</h1>
+            <p>${String(imc_round)}</p>
+        </div>
+    `;
+    } else if (imc_round >= 18.5 || imc_round <= 24.0) {
+        document.getElementById('resultado').innerHTML = `
+        <div class="color2 result">
+            <h1>Tu IMC</h1>
+            <p>${String(imc_round)}</p>
+        </div>
+    `;
+    } else if (imc_round >= 24.1 || imc_round <= 29.99) {
+        document.getElementById('resultado').innerHTML = `
+        <div class="color3 result">
+            <h1>Tu IMC</h1>
+            <p>${String(imc_round)}</p>
+        </div>
+    `;
     } else {
-        resultado = 'TU IMC ES DE: ' + imc_round + ' - Obesidad';
+        document.getElementById('resultado').innerHTML = `
+        <div class="color4 result">
+            <h1>Tu IMC</h1>
+            <p>${String(imc_round)}</p>
+        </div>
+    `;
     }
-    div_resultado.innerHTML = resultado;
 });
 
-document.getElementById('btn_calculadoradiv').addEventListener('click',function(){
-    let imc_calculator = document.getElementById('imc-calculator');
-    imc_calculator.style.display = 'flex';
+
+btn_close.addEventListener('click', function(){
+    div_resultados.classList.remove('show')
+    div_resultados.classList.add('hide')
+
+    setTimeout(() => {
+        div_resultados.style.display = 'none'
+    }, 500);
 })

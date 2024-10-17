@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/matematicas.css">
+    <link rel="shortcut icon" href="../img/Icons/LOGO NODO.png" type="image/x-icon">
     <title>NUTRIVAM</title>
 </head>
 
@@ -14,7 +15,6 @@
             <a href="../index.html"><img src="../img/Icons/home.svg" alt=""></a>
         </div>
         <div class="bottom-icons">
-            <a href="tecnologia.html"><img src="../img/Icons/tecnologia-icono.svg" alt="Tecnologia"></a>
             <a href="matematicas.html"><img src="../img/Icons/matematicas-icono sec.svg" alt="Matematicas"></a>
             <a href="quimica.html"><img src="../img/Icons/quimica-icono.svg" alt="Quimica"></a>
             <a href="fisica.html"><img src="../img/Icons/fisica-icono.svg" alt="Fisica"></a>
@@ -26,37 +26,85 @@
                 <div class="title">
                     <h1>NUTRIVAM</h1>
                 </div>
+                <div class="logo">
+                    <img src="../img/Icons/LOGO NODO.png" alt="" width="20%">
+                </div>
             </div>
             <div class="div-header"></div>
         </header>
         <article class="content-b2">
-            <div>
-                <button id="btn_calculadoradiv" class="Calcu-imc">Calcula tu IMC</button>
+            <div class="calculator">
                 <div class="imc-calculator">
                     <div class="head-calculator">
                         <h1>Calcula tu IMC</h1>
-                        <button class="close-btn" id="close-btn"><img src="../img/Icons/x.svg" alt=""></button>
                     </div>
-                    <form action="">
-                        <div>
+                    <form action="" style="width: 70%;">
+                        <div class="item">
+                            <h2>Genero</h2>
+                            <select name="" id="">
+                                <option value="">-</option>
+                                <option value="">Masculino</option>
+                                <option value="">Femenino</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <h2>Edad</h2>
+                            <input type="number" id="edad" min="0" placeholder="Ejemplo: 17">
+                        </div>
+                        <div class="item">
                             <h2>Peso</h2>
-                            <input type="number" id="peso">
+                            <input type="number" id="peso" min="0" placeholder="Peso en Kg. Ejemplo: 60">
                         </div>
-                        <div>
+                        <div class="item">
                             <h2>Altura</h2>
-                            <input type="number" id="altura">
-                        </div>
-                        <div>
-                            <button type="button" id="btn-imc">Calcular IMC</button>
+                            <input type="number" id="altura" min="0" placeholder="Altura en m. Ejemplo: 1.60">
                         </div>
                     </form>
-
-                    <div id="resultado">
-                    </div>
+                    <div>
+                        <button type="button" id="btn-imc">Calcular IMC</button>
+                    </div>      
                 </div>
             </div>
-
+            <article class="resultados" id="resultados">
+                <div class="header-result">
+                    <h2>Tu Resultado Personal</h2>
+                    <button id="btn-close"><img src="../img/Icons/x.svg" alt=""></button>
+                </div>
+                <div id="resultado">  
+                </div>
+                <div class="resultado">
+                    <div>
+                        <div>
+                            <p>Bajo Peso</p>
+                            <span>0,0 - 19,0</span>
+                        </div>
+                        <div class="colors color"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Peso Normal</p>
+                            <span>19,1 - 24,0</span>
+                        </div>
+                        <div class="colors color2"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Sobrepeso</p>
+                            <span>24,1 - 29,0</span>
+                        </div>
+                        <div class="colors color3"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Obesidad</p>
+                            <span>29,1 - 38,9</span>
+                        </div>
+                        <div class="colors color4"></div>
+                    </div>
+                </div>
+            </article>
         </article>
+
     </section>
     <script src="../JS/script.js"></script>
 </body>
